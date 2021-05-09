@@ -1,0 +1,1067 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import "variables";
+@import "projects";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+  font-weight: 300;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  height: 100vh;
+  display: block;
+  scroll-behavior: smooth !important;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+.spinner {
+  border: 6px solid transparent;
+  border-radius: 50%;
+  border-top: 6px solid #6930c3;
+  border-bottom: 6px solid #6930c3;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.addon {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  z-index: -1;
+  opacity: 0;
+  transition: all 450ms ease-in;
+}
+
+.active {
+  z-index: 999 !important;
+  margin-top: 7px !important;
+  position: fixed !important;
+  right: 0px !important;
+  top: 10px !important;
+  margin-right: 20px !important;
+}
+
+.mobileUL {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  width: 300px !important;
+  position: fixed !important;
+  right: 0 !important;
+  top: 0 !important;
+  z-index: 998 !important;
+  background-color: white !important;
+  padding-top: 200px !important;
+  animation: fromLeft 400ms 1 linear;
+}
+
+@keyframes fromLeft {
+  from {
+    transform: translateX(200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.mobileLink {
+  color: black !important;
+  text-align: center !important;
+  margin-top: 30px !important;
+}
+
+.main {
+  visibility: hidden;
+  .nav {
+    position: absolute;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 1em;
+    width: 100%;
+
+    .logo {
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 400;
+
+      cursor: pointer;
+      width: fit-content;
+      text-decoration: none;
+    }
+
+    ul {
+      float: right;
+      display: flex;
+      font-size: 1.1rem;
+      list-style-type: none;
+      font-weight: 300;
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 0 0.7em;
+        position: relative;
+        top: -28px;
+        transition: all 300ms ease-in;
+        &:hover {
+          font-size: 1.18rem;
+        }
+      }
+    }
+
+    .hamburger {
+      cursor: pointer;
+      float: right;
+      position: relative;
+      top: -35px;
+      display: none;
+      .line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin-top: 7px;
+        transition: all 300ms linear;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .hero {
+    width: 100%;
+    height: 750px;
+    background-color: $main-color;
+    padding-left: 3em;
+    padding-top: 7.5em;
+    h1 {
+      width: 420px;
+      font-weight: 500;
+      font-size: 2.8rem;
+      color: white;
+      line-height: 65px;
+      position: relative;
+      top: 30px;
+    }
+    a button {
+      width: 180px;
+      height: 45px;
+      outline: none;
+      margin-top: 60px;
+      border: none;
+      border-radius: 4px;
+      background-color: $secondary-color;
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
+
+      p {
+        display: inline;
+        position: relative;
+        top: -16px;
+        left: 11px;
+      }
+      svg {
+        stroke: white;
+        width: 35px;
+        margin-left: -15px;
+        margin-top: 0px;
+      }
+    }
+
+    .scroll {
+      display: block;
+      margin-top: 45px;
+
+      .circle {
+        animation: upDown 800ms infinite alternate-reverse;
+      }
+    }
+
+    .keyboard {
+      width: 630px;
+      position: absolute;
+      right: 0;
+      top: 205px;
+      margin-right: 60px;
+      transform: rotate(14deg);
+      .keyAnimation {
+        animation: upDownSlow 1000ms infinite alternate-reverse;
+      }
+      .key {
+        cursor: pointer;
+      }
+    }
+  }
+
+  #work,
+  #skills,
+  #about,
+  #hire {
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+    top: 80px;
+    font-size: 1.9rem;
+    color: $header-color;
+  }
+
+  #skills {
+    top: 225px;
+  }
+
+  #about {
+    top: 517px;
+  }
+
+  #hire {
+    top: 686px;
+  }
+
+  .portfolio {
+    position: relative;
+    top: 120px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 85px;
+    width: 1100px;
+    margin: 0 auto;
+
+    .card {
+      display: grid;
+      grid-template-columns: 45% 1fr;
+      width: 100%;
+      position: relative;
+      .info {
+        .info_title {
+          font-size: 1.3rem;
+          color: $header-color;
+          letter-spacing: 2px;
+          font-weight: 500;
+        }
+        .info_content {
+          margin: 10px 0px;
+          font-weight: 400;
+          font-size: 1.1rem;
+        }
+        .info_tech {
+          font-size: 1.2rem;
+          color: $tech-color;
+          font-weight: 500;
+        }
+        .technologies {
+          margin-top: 7px;
+          display: flex;
+          flex-wrap: wrap;
+          width: 90%;
+          .tech {
+            background-color: $tech-color;
+            padding: 4px 7px;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            margin: 7px;
+            margin-top: 3px;
+          }
+        }
+
+        .buttons {
+          margin-top: 20px;
+          display: flex;
+          a button {
+            width: 100px;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            height: 35px;
+            outline: none;
+            cursor: pointer;
+            border-radius: 4px;
+            background-color: $main-color;
+            transition: all 300ms ease-in;
+            margin-left: 15px;
+            &:hover {
+              background-color: $main-hover;
+            }
+          }
+        }
+      }
+      a .image {
+        .card_image {
+          height: 270px;
+          float: right;
+          width: 500px;
+          transition: all 300ms ease-in;
+          border-radius: 10px;
+          animation: upDownSlow 1200ms infinite alternate-reverse;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    .card1::before {
+      content: "";
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background-color: $svg-purple;
+      margin-top: 80px;
+      margin-left: -70px;
+      position: absolute;
+      z-index: -1;
+      top: -350px;
+      left: 50px;
+    }
+    .card2::before {
+      content: "";
+      border-style: solid;
+      border-width: 110px 160px 110px 0;
+      border-color: transparent $svg-blue transparent transparent;
+      position: absolute;
+      transform: rotate(140deg);
+      z-index: -1;
+      left: 500px;
+      top: -150px;
+    }
+
+    .card2::after {
+      content: "";
+      width: 200px;
+      height: 200px;
+      background-color: $svg-purple;
+      border-radius: 10px;
+      position: absolute;
+      z-index: -1;
+      top: 300px;
+      left: 70px;
+      transform: rotate(30deg);
+    }
+
+    .more {
+      width: fit-content;
+      margin: 0 auto;
+      button {
+        padding: 5px 10px;
+        background-color: $main-color;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        color: white;
+        transition: all 350ms ease;
+        border-radius: 3px;
+        cursor: pointer;
+        &:hover {
+          background-color: $main-hover;
+        }
+      }
+    }
+  }
+
+  .skills {
+    width: 100%;
+    background-color: $main-color;
+    height: 300px;
+    position: relative;
+    top: 250px;
+    .frontend {
+      width: 600px;
+      height: 250px;
+      background-color: white;
+      border-radius: 15px;
+      position: relative;
+      margin: 0 auto;
+      top: 35px;
+      h1 {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 400;
+        position: relative;
+        top: 20px;
+      }
+      p {
+        padding: 0 35px;
+        position: relative;
+        top: 30px;
+        font-size: 1.1rem;
+      }
+    }
+    .design {
+      width: 800px;
+      height: 200px;
+      position: relative;
+      background-color: $main-color;
+      border-radius: 15px;
+      margin: 0 auto;
+      top: -30px;
+      color: white;
+      h1 {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 400;
+        position: relative;
+        top: 30px;
+      }
+      p {
+        padding: 0 50px;
+        position: relative;
+        top: 45px;
+        font-size: 1.1rem;
+      }
+    }
+    .design::before {
+      content: "";
+      border-style: solid;
+      border-width: 110px 160px 110px 0;
+      border-color: transparent $svg-blue transparent transparent;
+      position: absolute;
+      transform: rotate(110deg);
+      z-index: -1;
+      left: -100px;
+      top: 180px;
+    }
+  }
+
+  .part1 {
+    position: relative;
+    top: 530px;
+    width: 1100px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+  .part2 {
+    position: relative;
+    top: 550px;
+    padding: 20px 0px;
+    margin: 0 auto;
+    background-color: $main-color;
+    color: white;
+    font-size: 1.1rem;
+    .content {
+      width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+
+  .part1::before {
+    content: "";
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background-color: $svg-purple;
+    margin-top: 80px;
+    margin-left: -70px;
+    position: absolute;
+    z-index: -1;
+    top: 75px;
+    left: 950px;
+  }
+
+  .hire {
+    top: 710px;
+    width: 100%;
+    background-color: $main-color;
+    position: relative;
+
+    .innerHire {
+      width: 800px;
+      padding: 0px 0px 60px 0px;
+      position: relative;
+      top: 50px;
+      background-color: white;
+      border-radius: 20px;
+      margin: 0 auto;
+      p {
+        font-size: 1.1rem;
+        position: relative;
+        top: 15px;
+        padding: 10px 2.5em;
+        span {
+          font-weight: 400;
+          font-size: 1.1rem;
+        }
+      }
+      form {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        width: 800px;
+        position: relative;
+        top: 5px;
+        padding: 0px 2.5em;
+        grid-column-gap: 25px;
+        grid-template-areas:
+          "name email"
+          "message message"
+          "button .";
+        input {
+          height: 55px;
+          border: none;
+          border-radius: 5px;
+          border: 1px solid rgb(214, 214, 214);
+          background-color: white;
+          outline: none;
+          padding: 15px;
+          font-size: 1.1rem;
+          width: 100%;
+          font-weight: 400;
+          transition: all 300ms linear;
+        }
+        textarea {
+          border: none;
+          border-radius: 5px;
+          border: 1px solid rgb(214, 214, 214);
+          background-color: white;
+          width: 100%;
+          outline: none;
+          resize: none;
+          padding: 15px;
+          font-size: 1.1rem;
+          font-weight: 400;
+          height: 150px;
+          transition: all 300ms linear;
+        }
+        .label {
+          position: relative;
+          font-size: 1.05rem;
+          font-weight: 400;
+          transition: all 300ms linear;
+          color: #4b00c4;
+          top: 40px;
+          left: 15px;
+          background-color: white;
+          z-index: 999;
+          width: fit-content;
+        }
+
+        .messageLabel {
+          top: 35px;
+        }
+        .nameWrapper {
+          grid-area: name;
+        }
+        .emailWrapper {
+          grid-area: email;
+        }
+        .messageWrapper {
+          grid-area: message;
+        }
+        button {
+          grid-area: button;
+          width: 170px;
+          height: 43px;
+          border: none;
+          outline: none;
+          background-color: $main-color;
+          color: white;
+          font-size: 1rem;
+          border-radius: 3px;
+          cursor: pointer;
+          transition: all 300ms linear;
+          position: relative;
+          top: 20px;
+          text-align: start;
+          &:hover {
+            background-color: $main-hover;
+          }
+          span {
+            display: inline;
+            position: relative;
+            top: -16px;
+            left: 21px;
+            width: fit-content;
+            font-size: 1.1rem;
+          }
+          svg {
+            stroke: white;
+            width: 30px;
+            position: relative;
+            left: 10px;
+          }
+        }
+      }
+
+      .loading {
+        border: 6px solid rgb(236, 236, 236);
+        border-radius: 50%;
+        border-top: 6px solid #6930c3;
+        width: 35px;
+        height: 35px;
+        position: relative;
+        z-index: 999;
+        transition: all 300ms ease-in;
+        top: -15px;
+        opacity: 0;
+        left: 233px;
+        transform: translate(-50%, -50%);
+        -webkit-animation: spin 1s linear infinite; /* Safari */
+        animation: spin 1s linear infinite;
+      }
+      .emailStatus {
+        position: relative;
+        transition: all 300ms ease-in;
+        opacity: 1;
+        padding-bottom: 20px;
+        padding-top: 0px;
+        margin-top: -10px;
+      }
+    }
+
+    .innerHire::before {
+      content: "";
+      width: 200px;
+      height: 200px;
+      background-color: $svg-blue;
+      border-radius: 10px;
+      position: absolute;
+      z-index: -1;
+      top: 550px;
+      left: -60px;
+      transform: rotate(-50deg);
+    }
+  }
+
+  .footer {
+    width: 100%;
+    background-color: $main-color;
+    height: 230px;
+    position: relative;
+    bottom: 0;
+    top: 1100px;
+    p:nth-child(1) {
+      color: white;
+      font-size: 1.1rem;
+      position: absolute;
+      font-weight: 400;
+      bottom: 0;
+      margin-left: 15px;
+      margin-bottom: 5px;
+    }
+    p:nth-child(2) {
+      text-align: center;
+      font-size: 1.15rem;
+      color: white;
+      position: relative;
+      top: 30px;
+    }
+
+    .icons {
+      position: relative;
+      margin: 0 auto;
+      width: fit-content;
+      top: 40px;
+      .github,
+      .linkedin,
+      .email {
+        stroke: white;
+        margin: 15px;
+        transition: all 300ms ease-in;
+        cursor: pointer;
+        &:hover {
+          width: 49px;
+          height: 49px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes upDown {
+  0% {
+    -webkit-transform: translate(262px, 798px);
+    transform: translate(262px, 798px);
+  }
+  100% {
+    -webkit-transform: translate(262px, 830px);
+    transform: translate(262px, 830px);
+  }
+}
+
+@keyframes upDownSlow {
+  0% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main #about {
+    top: 570px;
+  }
+  .main .part1 {
+    top: 600px;
+  }
+  .main .part2 {
+    top: 610px;
+  }
+  .main #hire {
+    top: 750px;
+  }
+  .main .hire {
+    top: 780px;
+  }
+}
+
+@media only screen and (min-width: 1460px) {
+  .main .hero {
+    height: 800px;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .main .hero .keyboard {
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 1190px) {
+  .main .hero .keyboard {
+    width: 550px;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .main .portfolio {
+    padding: 0px 7em;
+    width: auto;
+    margin: 0 auto;
+    top: 100px;
+
+    .card {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-row-gap: 40px;
+
+      .image {
+        .card_image {
+          float: unset;
+          margin: 0 auto;
+          height: 270px;
+          width: 500px;
+        }
+      }
+    }
+
+    .card2::after {
+      top: 600px;
+      left: 0px;
+    }
+  }
+
+  .main .part1 {
+    width: auto;
+    padding: 0px 1em;
+  }
+  .main .part2 {
+    padding: 20px 1em;
+
+    .content {
+      width: auto;
+    }
+  }
+
+  .main .part1::before {
+    top: 120px;
+    left: 80px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .main .hero .keyboard {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .main .portfolio {
+    padding: 0px 2.5em;
+  }
+
+  .main .hero,
+  .main .nav {
+    padding-left: 2em;
+  }
+
+  .main .portfolio .card2::before {
+    left: 300px;
+    top: -120px;
+  }
+
+  .main .skills {
+    .frontend {
+      width: 80%;
+      height: auto;
+      padding-bottom: 5em;
+      p {
+        padding: 0px 25px;
+      }
+    }
+    .design {
+      width: 90%;
+      height: auto;
+      padding-bottom: 5em;
+      top: 0px;
+      p {
+        padding: 0px 25px;
+      }
+    }
+    .design::before {
+      left: 70px;
+      top: 170px;
+    }
+  }
+
+  .main .hire {
+    .innerHire {
+      width: 90%;
+      height: auto;
+      form {
+        width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+          "name"
+          "email"
+          "message"
+          "button";
+      }
+    }
+    .innerHire::before {
+      top: 660px;
+      left: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main .nav ul {
+    display: none;
+  }
+  .main .nav .hamburger {
+    display: block;
+  }
+
+  .main .part1::before {
+    top: 200px;
+    left: 30px;
+  }
+}
+
+@media only screen and (max-width: 584px) {
+  .main .part1::before {
+    top: 280px;
+    left: 30px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .main .nav {
+    padding-left: 15px;
+    padding-right: 20px;
+  }
+
+  .main .hero {
+    padding-top: 9.5em;
+    padding-left: 17px;
+
+    h1 {
+      font-size: 2.2rem;
+      line-height: 50px;
+      width: fit-content;
+      padding-right: 50px;
+    }
+  }
+
+  .main .portfolio {
+    padding: 0px 20px;
+
+    .card {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-row-gap: 40px;
+
+      .image {
+        .card_image {
+          float: unset;
+          margin: 0 auto;
+          height: 270px;
+          width: 500px;
+        }
+      }
+    }
+
+    .card2::after {
+      top: 640px;
+      left: 30px;
+    }
+    .card2::before {
+      left: 50px;
+      top: -120px;
+    }
+  }
+
+  .main .hire .innerHire {
+    p {
+      padding: 10px 25px;
+    }
+    form {
+      padding: 0px 25px;
+      button {
+        p {
+          left: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .main .portfolio {
+    grid-row-gap: 50px;
+    .card {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-row-gap: 40px;
+      .image {
+        display: none;
+      }
+    }
+
+    .card2::after {
+      top: 390px;
+      left: 26px;
+      opacity: 0.6;
+    }
+    .card2::before {
+      opacity: 0.6;
+    }
+  }
+
+  .main .hire .innerHire::before {
+    opacity: 0.8;
+  }
+  .main .part1::before,
+  .main .skills .design::before {
+    opacity: 0.6;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main .part1::before {
+    top: 320px;
+    left: 30px;
+  }
+
+  .main #about {
+    top: 600px;
+  }
+  .main .part1 {
+    top: 620px;
+  }
+  .main .part2 {
+    top: 630px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .main .part1::before {
+    top: 370px;
+    left: 30px;
+  }
+
+  .main .hire .innerHire::before {
+    top: 690px;
+    left: 50px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .main .skills {
+    .frontend {
+      top: 15px;
+      width: 95%;
+      padding-bottom: 7em;
+      p {
+        padding: 0px 15px;
+        font-size: 1rem;
+      }
+    }
+    .design {
+      width: 97%;
+      height: auto;
+      padding-bottom: 2.5em;
+      top: -50px;
+      p {
+        padding: 0px 15px;
+        top: 20px;
+        font-size: 1rem;
+      }
+
+      h1 {
+        top: 11px;
+      }
+    }
+    .design::before {
+      left: 70px;
+      top: 170px;
+    }
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  .main .part1::before {
+    top: 420px;
+  }
+  .main .hire .innerHire::before {
+    top: 730px;
+    left: 30px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .main .part1::before {
+    top: 490px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .main .part1::before {
+    top: 520px;
+  }
+}
