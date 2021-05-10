@@ -286,6 +286,7 @@ html {
           display: flex;
           flex-wrap: wrap;
           width: 90%;
+          margin-left: -7px;
           .tech {
             background-color: $tech-color;
             padding: 4px 7px;
@@ -769,9 +770,8 @@ html {
       grid-row-gap: 40px;
 
       .image {
+        float: left;
         .card_image {
-          float: unset;
-          margin: 0 auto;
           height: 270px;
           width: 500px;
         }
