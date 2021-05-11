@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../style/css/main.css";
 import OnlyLearn from "../images/onlylearn.jpg";
 import JustType from "../images/justtype.jpg";
@@ -6,10 +6,16 @@ import Scorpion from "../images/scorpion.jpg";
 import Portfolio from "../images/portfolio.jpg";
 import Frozo from "../images/frozo.jpg";
 import DashBoard from "../images/dashboard.jpg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Project from "./services/Project";
 
 function AllProjects() {
+  // scroll to the top when the location (path) is changing
+  let location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <>
       <div className="allProjects__wrapper">

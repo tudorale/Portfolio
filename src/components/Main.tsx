@@ -890,7 +890,7 @@ function Main() {
 
           <div className="card card2">
             <div className="info" ref={info1}>
-              <h1 className="info_title">Only Learn</h1>
+              <h1 className="info_title">OnlyLearn</h1>
               <p className="info_content">
                 This is a learning platform where you can learn Web Development
                 for free, it has over 60 lessons in HTML5 and CSS3, with
