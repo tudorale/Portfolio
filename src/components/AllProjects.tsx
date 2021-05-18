@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../style/css/main.css";
 import OnlyLearn from "../images/onlylearn.jpg";
-import JustType from "../images/justtype.jpg";
+import TypingHub from "../images/typinghub.jpg";
 import Scorpion from "../images/scorpion.jpg";
 import Portfolio from "../images/portfolio.jpg";
 import Frozo from "../images/frozo.jpg";
@@ -45,11 +45,11 @@ function AllProjects() {
         </div>
         <div className="allProjects__grid">
           <Project
-            image={JustType}
-            repo="https://github.com/tudorale/justtype"
-            title="JustType"
-            description="JustType is a competitive platform for typists, where you can improve your typing speed by taking tests on different categories and gain points by taking tests to join into the top."
-            website="https://tudorale.github.io/justtype"
+            image={TypingHub}
+            repo="https://github.com/tudorale/typinghub"
+            title="TypingHub"
+            description="TypingHub is a competitive platform for typists, where you can improve your typing speed by taking tests on different categories and gain points by taking tests to join into the top."
+            website="https://tudorale.github.io/typinghub"
             maintained="yes"
             application="yes"
             react="yes"

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../style/css/main.css";
 import OnlyLearn from "../images/onlylearn.jpg";
-import JustType from "../images/justtype.jpg";
+import TypingHub from "../images/typinghub.jpg";
 import { Power3, TweenLite, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "emailjs-com";
@@ -842,7 +842,7 @@ function Main() {
         <div className="portfolio">
           <div className="card card1">
             <div className="info" ref={info2}>
-              <h1 className="info_title">JustType</h1>
+              <h1 className="info_title">TypingHub</h1>
               <p className="info_content">
                 This is my lastest project in React JS, it is a competitive
                 platform for typists, it has an authentication system and there
@@ -862,14 +862,14 @@ function Main() {
 
               <div className="buttons">
                 <a
-                  href="https://tudorale.github.io/justtype/#/"
+                  href="https://tudorale.github.io/typinghub/#/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <button style={{ marginLeft: "0px" }}>Website</button>
                 </a>
                 <a
-                  href="https://github.com/tudorale/justtype"
+                  href="https://github.com/tudorale/typinghub"
                   target="_blank"
                   rel="noreferrer"
                 >
