@@ -878,12 +878,12 @@ function Main() {
               </div>
             </div>
             <a
-              href="https://tudorale.github.io/justtype/#/"
+              href="https://tudorale.github.io/typinghub/#/"
               target="_blank"
               rel="noreferrer"
             >
               <div className="image" ref={image2}>
-                <img src={JustType} alt="" className="card_image" />
+                <img src={TypingHub} alt="" className="card_image" />
               </div>
             </a>
           </div>
