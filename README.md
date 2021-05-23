@@ -8,11 +8,9 @@ Personal Portfolio where you can find more about me, all my projects and a secti
 - SCSS
 - GSAP
 
-## Path
-
-- Designed using Gravit Designer
-- Coded using VS Code, theme - Scorpion Theme
+## Future updates
+- Animations for All Projects page
+- Resume on website
 
 ## Preview
-
 Website: https://tudorale.github.io/portfolio/
