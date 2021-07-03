@@ -8,6 +8,14 @@ Personal Portfolio where you can find more about me, all my projects and a secti
 - SCSS
 - GSAP
 
+## Presented projects
+- TypingHub
+- Motes
+- OnlyLearn
+- Scorpion Theme (VS Code Theme)
+- Frozo
+- Dashboard
+
 ## Future updates
 - Animations for All Projects page
 - Resume on website

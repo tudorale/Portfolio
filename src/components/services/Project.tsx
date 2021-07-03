@@ -27,7 +27,7 @@ function Project(props: any) {
             <div className="tag">
               <img
                 alt="Maintenance"
-                src="https://img.shields.io/maintenance/no/2020?style=flat-square"
+                src="https://img.shields.io/maintenance/no/2021?style=flat-square"
               />
             </div>
           ) : null}
