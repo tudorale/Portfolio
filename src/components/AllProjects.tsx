@@ -6,6 +6,7 @@ import Scorpion from "../images/scorpion.jpg";
 import Portfolio from "../images/portfolio.jpg";
 import Frozo from "../images/frozo.jpg";
 import DashBoard from "../images/dashboard.jpg";
+import Motes from "../images/motes.png";
 import { Link, useLocation } from "react-router-dom";
 import Project from "./services/Project";
 
@@ -56,6 +57,17 @@ function AllProjects() {
           />
 
           <Project
+            image={Motes}
+            repo="https://github.com/tudorale/motes"
+            title="Motes"
+            description="Motes is a place where you can keep all your notes in one place, the project started with the idea of a global Notes App as you have on your phone or computer, now you can keep all your notes here and you can access them on every device by going to your mote via a key."
+            website="https://tudorale.github.io/motes/#/"
+            maintained="yes"
+            application="yes"
+            react="yes"
+          />
+
+          <Project
             image={OnlyLearn}
             repo="https://github.com/tudorale/onlylearn"
             title="OnlyLearn"
@@ -93,7 +105,7 @@ function AllProjects() {
             title="Frozo"
             description="Frozo is a streetwear brand, made by me and my friend, who is imprinting photos into clothes, this website is the landing page for this idea."
             website="https://tudorale.github.io/frozo"
-            maintained="kinda"
+            maintained="no"
             landing="yes"
             react="yes"
           />
