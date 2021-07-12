@@ -7,11 +7,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "emailjs-com";
 import { HashLink } from "react-router-hash-link";
 import { Link, useLocation } from "react-router-dom";
+import moment from 'moment';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Main() {
-  const [emailStatus, setEmailStatus] = useState("");
+  const [emailStatus, setEmailStatus] = useState<string>("");
+  const [experienceYear, setExperienceYear] = useState<string | number>("");
+
+  useEffect(() => {
+    setExperienceYear(moment([2019]).fromNow(true))
+  }, []);
 
   let location = useLocation();
 
@@ -951,7 +957,7 @@ function Main() {
           <div className="frontend">
             <h1>Front-End Development</h1>
             <p>
-              In the Front-End Development field I have three years of experience
+              In the Front-End Development field I have {experienceYear} of experience
               in the modern technologies that a developer is using, like React
               JS, React-Redux, TypeScript, JavaScript, Git, SCSS, and more, and I am
               still learning new stuff.
@@ -960,9 +966,8 @@ function Main() {
           <div className="design">
             <h1>UI/UX Design</h1>
             <p>
-              I love to design things and to edit, from editing photos to websites and more. I used
-              Adobe Photoshop for more than 4 years and recently I started using
-              Figma for desining websites.
+              I love to design and edit things, from editing photos to websites and more. I am using
+              Adobe Photoshop from 2018 and for website design I am using Figma along with other softwares like Gravit Designer.
             </p>
           </div>
         </div>
@@ -973,7 +978,7 @@ function Main() {
 
         <p className="part1" ref={part1}>
           First of all, my name is Tudor Alexandru - Ionut and I am from
-          România, my passion for Web Development started in August 2019. I
+          România, my passion for Web Development started in July 2019. I
           started with HTML5 and I didn't know so much about this, but I chose
           the Front-End field because I want to show the world what I can do
           with a computer. And now I am doing freelancing on UpWork and living a good life.{" "}
@@ -1075,7 +1080,7 @@ function Main() {
         </div>
 
         <div className="footer">
-          <p>Ⓒ 2021 Tudor Alexandru</p>
+          <p>Ⓒ {moment().format("yyyy")} Tudor Alexandru</p>
           <p>Made with love in România</p>
           <div className="icons">
             <a
