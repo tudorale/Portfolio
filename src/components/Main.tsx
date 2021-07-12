@@ -6,12 +6,18 @@ import { Power3, TweenLite, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "emailjs-com";
 import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Main() {
   const [emailStatus, setEmailStatus] = useState("");
+
+  let location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   // animations
   let header: any = useRef(null);
@@ -848,7 +854,7 @@ function Main() {
                 platform for typists, it has an authentication system and there
                 you can learn to improve your typing speed, I am storing the
                 data using Firestore and on your profile you can see it, the
-                project is still in development and I am proud of this project.{" "}
+                project is still in development.{" "}
               </p>
               <h1 className="info_tech">Technologies</h1>
 
@@ -945,18 +951,18 @@ function Main() {
           <div className="frontend">
             <h1>Front-End Development</h1>
             <p>
-              In the Front-End Development field I have two years of experience
+              In the Front-End Development field I have three years of experience
               in the modern technologies that a developer is using, like React
-              JS, React Redux, TypeScript, JavaScript, Git and more, and I am
-              still learning.
+              JS, React-Redux, TypeScript, JavaScript, Git, SCSS, and more, and I am
+              still learning new stuff.
             </p>
           </div>
           <div className="design">
             <h1>UI/UX Design</h1>
             <p>
-              I love to design things, from banners to websites and more. I used
-              Adobe Photoshop for more than 3 years and recently I started using
-              Gravit Designer for desining websites.
+              I love to design things and to edit, from editing photos to websites and more. I used
+              Adobe Photoshop for more than 4 years and recently I started using
+              Figma for desining websites.
             </p>
           </div>
         </div>
@@ -970,7 +976,7 @@ function Main() {
           România, my passion for Web Development started in August 2019. I
           started with HTML5 and I didn't know so much about this, but I chose
           the Front-End field because I want to show the world what I can do
-          with a computer.{" "}
+          with a computer. And now I am doing freelancing on UpWork and living a good life.{" "}
         </p>
         <div className="part2" ref={part2}>
           <div className="content">

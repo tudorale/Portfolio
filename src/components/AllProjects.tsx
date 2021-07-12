@@ -6,7 +6,7 @@ import Scorpion from "../images/scorpion.jpg";
 import Portfolio from "../images/portfolio.jpg";
 import Frozo from "../images/frozo.jpg";
 import DashBoard from "../images/dashboard.jpg";
-import Motes from "../images/motes.png";
+import Motes from "../images/motes.jpg";
 import { Link, useLocation } from "react-router-dom";
 import Project from "./services/Project";
 
