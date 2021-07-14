@@ -16,7 +16,7 @@ function Main() {
   const [experienceYear, setExperienceYear] = useState<string | number>("");
 
   useEffect(() => {
-    setExperienceYear(moment([2019]).fromNow(true))
+    setExperienceYear(moment([2019]).fromNow(true));
   }, []);
 
   let location = useLocation();

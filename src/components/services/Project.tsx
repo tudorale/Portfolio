@@ -1,6 +1,8 @@
 import React from "react";
 import "../../style/css/main.css";
+
 function Project(props: any) {
+
   return (
     <div className="project project1">
       <div className="partOne">
