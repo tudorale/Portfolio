@@ -856,11 +856,10 @@ function Main() {
             <div className="info" ref={info2}>
               <h1 className="info_title">TypingHub</h1>
               <p className="info_content">
-                This is my lastest project in React JS, it is a competitive
-                platform for typists, it has an authentication system and there
-                you can learn to improve your typing speed, I am storing the
-                data using Firestore and on your profile you can see it, the
-                project is still in development.{" "}
+                A competitive
+                platform for typists, with ranking, leaderboard, global chat system, you can improve your speed with us.
+                Also you can see your tests history along with more data by going to your profile and look at the charts, you can play on quotes,
+                random words or custom texts made by you or the comunity.
               </p>
               <h1 className="info_tech">Technologies</h1>
 
