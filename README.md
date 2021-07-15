@@ -7,6 +7,7 @@ Personal Portfolio where you can find more about me, all my projects and a secti
 - TypeScript
 - SCSS
 - GSAP
+- AOS
 
 ## Presented projects
 - TypingHub
@@ -17,8 +18,8 @@ Personal Portfolio where you can find more about me, all my projects and a secti
 - Dashboard
 
 ## Future updates
-- Animations for All Projects page
 - Resume on website
+- Case study of client project
 
 ## Preview
 Website: https://tudorale.github.io/portfolio/
