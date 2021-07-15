@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "../style/css/main.css";
 import OnlyLearn from "../images/onlylearn.jpg";
 import TypingHub from "../images/typinghub.jpg";
@@ -11,6 +11,7 @@ import { Link, useLocation } from "react-router-dom";
 import Project from "./services/Project";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Power3, TweenLite, gsap } from "gsap";
 
 function AllProjects() {
   // scroll to the top when the location (path) is changing
@@ -26,22 +27,67 @@ function AllProjects() {
     });
   }, [])
 
+  let main: any = useRef(null);
+
+  let logo:any = useRef(null);
+  let link:any = useRef(null);
+  let header:any = useRef(null);
+  let info:any = useRef(null);
+  let indication:any = useRef(null);
+
+  useEffect(() => {
+    TweenLite.to(main.current, 0, { css: { visibility: "visible" } });
+
+    TweenLite.from(logo.current, 0.9, {
+      opacity: 0,
+      y: 30,
+      ease: Power3.easeIn,
+    });
+
+    TweenLite.from(link.current, 0.7, {
+      opacity: 0,
+      y: 30,
+      ease: Power3.easeOut,
+      delay: 0.2,
+    });
+
+    TweenLite.from(header.current, 0.6, {
+      opacity: 0,
+      y: 30,
+      ease: Power3.easeOut,
+      delay: 0.4,
+    });
+
+    TweenLite.from(info.current, 0.6, {
+      opacity: 0,
+      y: 30,
+      ease: Power3.easeOut,
+      delay: 0.9,
+    });
+
+    TweenLite.from(indication.current, 0.6, {
+      opacity: 0,
+      y: 30,
+      ease: Power3.easeOut,
+      delay: 1.3,
+    });
+  }, [])
   return (
     <>
-      <div className="allProjects__wrapper">
+      <div className="allProjects__wrapper" ref={main}>
         <div className="allProjects__nav">
           <Link to="/" className="nav__logo">
-            Tudor Alexandru
+            <span ref={logo}>Tudor Alexandru</span>
           </Link>
           <ul className="nav__links">
-            <Link to="/" className="link">
+            <Link to="/" className="link" ref={link}>
               <li>Home</li>
             </Link>
           </ul>
         </div>
         <div className="allProjects__hero">
-          <h1>Tudor Alexandru's open source projects</h1>
-          <p>
+          <h1 ref={header}>Tudor Alexandru's open source projects</h1>
+          <p ref={info}>
             All the projects are explained in detail on{" "}
             <a
               href="https://github.com/tudorale"
@@ -51,7 +97,7 @@ function AllProjects() {
               GitHub
             </a>
           </p>
-          <p>Please scroll</p>
+          <p ref={indication}>Please scroll</p>
         </div>
         <div className="allProjects__grid">
           <div data-aos="fade-up">
