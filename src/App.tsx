@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import "./style/css/main.css";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import AiBloc from "./components/Aibloc";
 
 function App() {
   const Main = React.lazy(() => import("./components/Main"));
@@ -14,6 +15,7 @@ function App() {
           <Switch>
             <Route exact component={Main} path="/" />
             <Route exact component={AllProjects} path="/projects" />
+            <Route exact component={AiBloc} path="/aibloc" />
           </Switch>
         </Router>
       </div>
