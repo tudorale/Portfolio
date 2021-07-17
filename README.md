@@ -19,7 +19,7 @@ Personal Portfolio where you can find more about me, all my projects and a secti
 
 ## Future updates
 - Resume on website
-- Case study of client project
+- Change website design in the future
 
 ## Preview
 Website: https://tudorale.github.io/portfolio/
