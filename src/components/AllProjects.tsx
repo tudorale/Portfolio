@@ -34,6 +34,7 @@ function AllProjects() {
   let header:any = useRef(null);
   let info:any = useRef(null);
   let indication:any = useRef(null);
+  let caseStudy:any = useRef(null);
 
   useEffect(() => {
     TweenLite.to(main.current, 0, { css: { visibility: "visible" } });
@@ -65,11 +66,18 @@ function AllProjects() {
       delay: 0.9,
     });
 
+    TweenLite.from(caseStudy.current, 0.6, {
+      opacity: 0,
+      y: 30,
+      ease: Power3.easeOut,
+      delay: 1.2,
+    });
+
     TweenLite.from(indication.current, 0.6, {
       opacity: 0,
       y: 30,
       ease: Power3.easeOut,
-      delay: 1.3,
+      delay: 1.4,
     });
   }, [])
   return (
@@ -97,6 +105,7 @@ function AllProjects() {
               GitHub
             </a>
           </p>
+          <Link to="/"><h2 ref={caseStudy}>See a case study</h2></Link>
           <p ref={indication}>Please scroll</p>
         </div>
         <div className="allProjects__grid">
