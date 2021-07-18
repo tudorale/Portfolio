@@ -105,7 +105,7 @@ function AllProjects() {
               GitHub
             </a>
           </p>
-          <Link to="/"><h2 ref={caseStudy}>See a case study</h2></Link>
+          <Link to="/case-study/aibloc"><h2 ref={caseStudy}>See a case study</h2></Link>
           <p ref={indication}>Please scroll</p>
         </div>
         <div className="allProjects__grid">

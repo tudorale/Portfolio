@@ -1,0 +1,94 @@
+.wrapper{
+    a{
+        color: $main-hover;
+        font-size: 1.1rem;
+        display: block;
+        margin-top: 10px;
+        margin-left: 20px;
+
+    }
+    h1{
+        font-weight: 600;
+        font-size: 2.4rem;
+        margin-left: 20px;
+
+        span{
+            color: $main-color;
+            font-weight: 600;
+        }
+    }
+
+    h2{
+        font-weight: 400;
+        margin-top: 10px;
+        font-size: 1.8rem;
+        margin-left: 20px;
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 2px;
+            background-color: $main-color;
+            z-index: -1;
+            margin-top: 23px;
+            margin-left: 10px;
+        }
+    }
+    h3{
+        font-weight: 300;
+        margin-top: 10px;
+        font-size: 1.5rem;
+        margin-left: 20px;
+    }
+    p{
+        margin-top: 10px;
+        font-size: 1.2rem;
+        margin-left: 20px;
+
+        span{
+            color: $main-color;
+            font-weight: 400;
+        }
+    }
+
+    .imageWrapper{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: space-around;
+        margin-top: 30px;
+        align-items: center;
+        background-color: $main-color;
+        img{
+            width: 700px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+        h1{
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    .fourImages{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-row-gap: 30px;
+    }
+    
+    .fourImages img{
+        width: 600px;
+        justify-content: space-between;
+    }
+
+    .footerContent{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
