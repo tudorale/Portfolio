@@ -36,7 +36,7 @@ function Aibloc() {
                 <h1>Hero section, with an interactiv demo from the product.</h1>
             </div>
 
-            <h2>What was my role on this project?</h2>
+            <h3 className="special">What was my role on this project?</h3>
             <p>As the recruiter for this one time project wanted a Front-End Developer, with experience in React JS, I handled the coding of the landing page but also the design of it.</p>
             <h3>What technologies I used?</h3>
             <p>For the coding process I used <span>React JS</span> with the following libraries: <span>GSAP</span>, <span>AOS</span>, <span>React Slick</span> and <span>Typed JS</span>.</p>
@@ -49,7 +49,7 @@ function Aibloc() {
                 <h1>Section two, about the first feature, along with a carousel with videos.</h1>
             </div>
 
-            <h2>A walkthrough my process</h2>
+            <h3 className="special">A walkthrough my process</h3>
             <p>The project started with a wireframe made in Figma, after the client review it, I started adding more features, illustrations and icons to make the design look better. After the mock up for the landing page was done I started the coding process.</p>
             <p>As I said I made this project in React JS as the client had his platform also on React JS, this will help the client to implement the landing page to his main project, the coding process took around <span>72 hours</span> of coding, the first day I added the content for the website, the second day we found illustrations and made carousel for the videos that were provided by the client, and in the final day I made the website fully responsive.</p>
             <p>The landing page turned out as a beautiful responsive website with animations and a great user experience as you can see in the images below.</p>
