@@ -1,6 +1,7 @@
-# Portfolio
+# Old Portfolio made in React JS
 
-Personal Portfolio where you can find more about me, all my projects and a section where you can find me, the portfolio is fully updated everytime a new change is necessary.
+An old personal portfolio where you can find more about me, all my projects and a section where you can find me, the current version of my portfolio can be found here:
+<a href="https://github.com/tudorale/portfolio">current portfolio</a>
 
 ## Tech
 - React JS - React-Router, React-Lazy, React-Suspense, React-Hooks
@@ -17,10 +18,5 @@ Personal Portfolio where you can find more about me, all my projects and a secti
 - Frozo
 - Dashboard
 
-## Future updates
-- Resume on website
-- Migrate to Next JS
-- Change website design in the future 
-
 ## Preview
-Website: https://tudorale.github.io/portfolio/
+Website: Unavailable, you can clone the repository locally, run `npm install` then `npm start`
