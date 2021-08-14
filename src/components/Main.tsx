@@ -494,7 +494,7 @@ function Main() {
         </div>
 
         <div className="hero">
-          <h1 ref={header}>I create beautiful websites with my hands</h1>
+          <h1 ref={header}>This is an old version of the portfolio, view my <a href="https://tudoralexandru.vercel.app/">current portfolio</a></h1>
           <HashLink to="#hire">
             <button ref={button}>
               <svg
