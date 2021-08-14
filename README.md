@@ -19,4 +19,4 @@ An old personal portfolio where you can find more about me, all my projects and 
 - Dashboard
 
 ## Preview
-Website: Unavailable, you can clone the repository locally, run `npm install` then `npm start`
+Website: https://tudorale.github.io/portfolio/#/ but I recommend you to see my current version of my portfolio at: https://tudoralexandru.vercel.app/
